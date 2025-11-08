@@ -1,7 +1,7 @@
 // components/home/features-section.tsx
 import React from 'react';
 import { Grid } from 'lucide-react';
-import { FeatureItem } from '~/types';
+import type { FeatureItem } from '~/types';
 
 interface FeaturesSectionProps {
   features: FeatureItem[];
