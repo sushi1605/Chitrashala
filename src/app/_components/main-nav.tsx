@@ -19,7 +19,7 @@ interface MainNavProps {
   isLoggedIn: boolean;
   links: string[];
   showSearchBar: boolean;
-  toggleSidebar: () => void;
+  toggleSidebar?: () => void;
 }
 
 export function MainNav({
@@ -45,7 +45,7 @@ export function MainNav({
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => toggleSidebar()}
+            onClick={() => toggleSidebar?.()}
             className="lg:hidden text-white"
           >
             <Menu size={24} />
