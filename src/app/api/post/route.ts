@@ -167,3 +167,5 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+export const runtime = "nodejs";
+export const bodySizeLimit = "100mb";
