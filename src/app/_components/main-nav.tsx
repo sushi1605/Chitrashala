@@ -9,6 +9,7 @@ import { ThemeToggle } from "./theme-toggle";
 import { useRouter } from "next/navigation";
 import SignOutButton from "./signout-button";
 import { Logo } from "~/components/logo";
+import { UserButton } from "./userProfileButton";
 
 interface MainNavProps {
   isLoggedIn: boolean;
@@ -96,13 +97,7 @@ export function MainNav({
           <ThemeToggle />
           {isLoggedIn ? (
             <div className="flex gap-4 w-[50%] mr-10">
-              <Button
-                variant="ghost"
-                size="icon"
-                className=" bg-gray-300 hover:bg-gray-100 dark:bg-gray-300/20 dark:hover:bg-gray-100/80 hover:text-black lg:w-20"
-              >
-                <User className="h-5 w-5" />
-              </Button>
+              <UserButton />
               <SignOutButton />
             </div>
           ) : (
